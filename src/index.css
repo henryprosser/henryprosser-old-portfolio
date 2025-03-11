@@ -23,6 +23,7 @@
   --primary-color: #ffffff;
   --secondary-color: #c4c4c4;
   --body-color: #1e1e1e;
+  --button-color: #222222;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -92,7 +93,7 @@ img {
 }
 
 .section {
-  padding-block: 5rem 1rem;
+  padding-block: 2rem 1rem;
 }
 
 .section__title {
@@ -230,4 +231,87 @@ img {
   font-size: 3.125rem;
   color: var(--primary-color);
   min-width: 300px;
+}
+
+/*=============== ABOUT ME ===============*/
+.about {
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+.about__title {
+  font-size: 2.5rem;
+  font-weight: var(--font-demi-bold);
+  padding-bottom: 1.875rem;
+  letter-spacing: -0.4px;
+}
+
+.headshot__container {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: auto;
+}
+
+.headshot__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__description {
+  padding-top: 1.625rem;
+  padding-bottom: 1.25rem;
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.download__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  height: 49px;
+  background-color: #222222;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  border-radius: 32px;
+  position: relative;
+  transition: background-color 0.25s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.download__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* Inner Shadow */
+.download__button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+/* Hover Effect */
+.download__button:hover {
+  background-color: #333333;
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.download__button::active {
+  transform: translateY(0);
 }

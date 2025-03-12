@@ -3,7 +3,7 @@ export default function AboutMe() {
     <section className="about section">
       <div className="about__container container grid">
         <div className="about__data">
-          <h2 className="about__title">About Me</h2>
+          <h2 className="section__title">About Me</h2>
           <div className="headshot__container">
             <img
               src="src/assets/images/profile-pic copy.png"

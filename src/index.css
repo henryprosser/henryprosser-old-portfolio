@@ -98,7 +98,10 @@ img {
 
 .section__title {
   text-align: center;
-  margin-bottom: 1.875rem;
+  font-size: 2.5rem;
+  font-weight: var(--font-demi-bold);
+  padding-bottom: 1.875rem;
+  letter-spacing: -0.4px;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -236,14 +239,7 @@ img {
 /*=============== ABOUT ME ===============*/
 .about {
   text-align: center;
-  padding-bottom: 8rem;
-}
-
-.about__title {
-  font-size: 2.5rem;
-  font-weight: var(--font-demi-bold);
-  padding-bottom: 1.875rem;
-  letter-spacing: -0.4px;
+  padding-bottom: 4rem;
 }
 
 .headshot__container {
@@ -314,4 +310,54 @@ img {
 
 .download__button::active {
   transform: translateY(0);
+}
+
+/*=============== QUALIFICATIONS ===============*/
+.qualifications {
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+.qualifications__container {
+  grid-template-columns: 270px;
+  justify-content: center;
+}
+
+.qualifications__title {
+  font-size: 2.5rem;
+  font-weight: var(--font-demi-bold);
+}
+
+.category__title-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding-bottom: 2rem;
+}
+
+.category__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-medium);
+}
+
+.category__data {
+  padding-bottom: 1.8125rem;
+}
+
+.category__data > * {
+  text-align: initial;
+  font-weight: var(--font-medium);
+}
+
+.category__data h4 {
+  font-size: 1rem;
+  letter-spacing: -0.16px;
+  padding-bottom: 0.875rem;
+}
+
+.category__data p {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  letter-spacing: -0.12px;
 }

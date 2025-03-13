@@ -33,6 +33,22 @@ export default function Skills() {
             />
           </div>
         </div>
+
+        <div className="skill__container">
+          <h3 className="skill__title">Back-End</h3>
+          <div className="icon__container" id="back-end">
+            <img
+              src="src/assets/images/python.svg"
+              alt="Python"
+              className="skill__icon icon6"
+            />
+            <img
+              src="src/assets/images/java.svg"
+              alt="Java"
+              className="skill__icon icon7"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -363,6 +363,10 @@ img {
 }
 
 /*=============== SKILLS ===============*/
+.skills__container {
+  gap: 2.125rem;
+}
+
 .skill__container {
   text-align: center;
   background-color: #222222;
@@ -400,7 +404,7 @@ img {
 
 .icon__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto; /* Two rows */
   gap: 20px;
   padding: 25px 20px 15px;
@@ -442,4 +446,18 @@ img {
   width: 52px;
   height: 52px;
   margin-left: 3px;
+}
+
+#back-end {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icon6 {
+  height: 58px;
+  width: 58px;
+}
+
+.icon7 {
+  height: 59px;
+  width: 59px;
 }

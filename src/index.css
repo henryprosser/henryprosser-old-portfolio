@@ -364,7 +364,11 @@ img {
 
 /*=============== SKILLS ===============*/
 .skills__container {
-  gap: 2.125rem;
+  column-gap: 2.125rem;
+}
+
+.skills__container > *:first-child {
+  margin-bottom: -1.5rem; /* Cancels out the top gap */
 }
 
 .skill__container {
@@ -401,6 +405,10 @@ img {
   font-weight: var(--font-medium);
   color: var(--tertiary-color);
 }
+
+/* #skills__title {
+  padding-bottom: 0;
+} */
 
 .icon__container {
   display: grid;
@@ -448,7 +456,8 @@ img {
   margin-left: 3px;
 }
 
-#back-end {
+#back-end,
+#tools {
   grid-template-columns: repeat(2, 1fr);
 }
 

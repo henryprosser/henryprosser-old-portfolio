@@ -49,6 +49,22 @@ export default function Skills() {
             />
           </div>
         </div>
+
+        <div className="skill__container">
+          <h3 className="skill__title">Tools</h3>
+          <div className="icon__container" id="tools">
+            <img
+              src="src/assets/images/figma.svg"
+              alt="Python"
+              className="skill__icon icon8"
+            />
+            <img
+              src="src/assets/images/git.svg"
+              alt="Java"
+              className="skill__icon icon9"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

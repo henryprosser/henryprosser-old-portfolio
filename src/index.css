@@ -22,6 +22,7 @@
   /*========== Colors ==========*/
   --primary-color: #ffffff;
   --secondary-color: #c4c4c4;
+  --tertiary-color: #8a8f93;
   --body-color: #1e1e1e;
   --button-color: #222222;
 
@@ -315,7 +316,6 @@ img {
 /*=============== QUALIFICATIONS ===============*/
 .qualifications {
   text-align: center;
-  padding-bottom: 8rem;
 }
 
 .qualifications__container {
@@ -360,4 +360,86 @@ img {
   font-size: 0.75rem;
   color: var(--secondary-color);
   letter-spacing: -0.12px;
+}
+
+/*=============== SKILLS ===============*/
+.skill__container {
+  text-align: center;
+  background-color: #222222;
+  padding: 1rem;
+  width: 284px;
+  justify-self: center;
+  border-radius: 32px;
+  position: relative;
+}
+
+.skill__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* Inner Shadow */
+.skill__container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.skill__title {
+  font-size: 1.25rem;
+  font-weight: var(--font-medium);
+  color: var(--tertiary-color);
+}
+
+.icon__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 20px;
+  padding: 25px 20px 15px;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+
+.icon1 {
+  grid-column: 1;
+  grid-row: 1;
+} /* First row, first column */
+.icon2 {
+  grid-column: 2;
+  grid-row: 1;
+} /* First row, second column */
+.icon3 {
+  grid-column: 3;
+  grid-row: 1;
+} /* First row, third column */
+.icon4 {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  justify-self: center;
+} /* Second row, between first & second */
+.icon5 {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  justify-self: center;
+} /* Second row, between second & third */
+
+.skill__icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.icon3 {
+  width: 52px;
+  height: 52px;
+  margin-left: 3px;
 }

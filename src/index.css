@@ -28,6 +28,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
+  /* Desktop */
   --body-font: "Articulat CF", sans-serif;
   --h1-font-size: 6rem;
   --h2-font-size: 5rem;
@@ -103,6 +104,15 @@ img {
   font-weight: var(--font-demi-bold);
   padding-bottom: 1.875rem;
   letter-spacing: -0.4px;
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: var(--font-demi-bold);
+  letter-spacing: -0.32px;
+  color: var(--secondary-color);
+  padding-bottom: 2rem;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -563,4 +573,156 @@ img {
 
 .arrow-circle svg {
   color: white;
+}
+
+/*=============== CONTACT ===============*/
+#contact__title {
+  padding: 0;
+}
+
+.contact__method-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact__method-data {
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+}
+
+.contact__method-data a {
+  color: inherit;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact__method-data a:hover {
+  opacity: 0.6;
+}
+
+.contact__or {
+  text-align: center;
+  font-weight: var(--font-demi-bold);
+  color: var(--tertiary-color);
+  font-size: 1rem;
+}
+
+.contact__title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact__subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.contact__form {
+  width: min(90%, 330px);
+  margin: 0 auto;
+}
+
+.input__group {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input__group label {
+  position: absolute;
+  top: -14.5px;
+  left: 15px;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+  background: var(--body-color);
+  padding: 4px;
+  color: var(--primary-color);
+}
+
+.input__group input,
+.input__group textarea {
+  width: 100%;
+  max-width: 100%; /* Prevents unwanted shrinking */
+  min-width: 200px; /* Ensures minimum width for small screens */
+  padding: 15px;
+  border: 1.5px solid var(--tertiary-color);
+  background: none;
+  border-radius: 32px;
+  outline: none;
+  font-family: var(--body-font);
+  font-size: 0.75rem;
+  color: var(--tertiary-color);
+  opacity: 1;
+}
+
+.input__group input:-webkit-autofill,
+.input__group textarea:-webkit-autofill {
+  background-color: var(--body-color) !important;
+  color: var(--tertiary-color) !important;
+  font-family: var(--body-font);
+  font-size: 0.75rem;
+  border: 1.5px solid var(--tertiary-color);
+  box-shadow: 0 0 0px 1000px var(--body-color) inset !important;
+  -webkit-text-fill-color: var(--tertiary-color) !important;
+}
+
+::placeholder {
+  font-family: var(--body-font);
+  font-size: 0.75rem;
+  color: var(--tertiary-color);
+  opacity: 0.5;
+}
+
+.input__group textarea {
+  border-radius: 20px;
+  height: 100px;
+  resize: none;
+}
+
+.input__group:last-of-type {
+  margin-bottom: 0;
+}
+
+.contact__submit {
+  width: 100%;
+  padding: 15px;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.contact__submit i {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.contact__submit:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.contact__submit:hover i {
+  transform: translateX(5px);
+}
+
+/* Click Effect */
+.contact__submit:active {
+  transform: scale(0.95);
+}
+
+#submit__arrow {
+  margin-bottom: 8px;
+  margin-left: 4px;
 }

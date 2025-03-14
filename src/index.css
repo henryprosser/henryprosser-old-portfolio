@@ -34,12 +34,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  /* Desktop */
   --body-font: "Articulat CF", sans-serif;
-  --h1-font-size: 6rem;
-  --h2-font-size: 5rem;
-  --h3-font-size: 2rem;
-  --body-font-size: 1.375rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -90,6 +85,42 @@ img {
   height: auto;
 }
 
+h1 {
+  font-size: 3.125rem;
+  font-size: clamp(
+    3.125rem,
+    2.112676056338028rem + 4.31924882629108vw,
+    6rem
+  ) !important;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-size: clamp(
+    2.5rem,
+    1.619718309859155rem + 3.755868544600939vw,
+    5rem
+  ) !important;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-size: clamp(
+    1.25rem,
+    0.9859154929577465rem + 1.1267605633802815vw,
+    2rem
+  ) !important;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-size: clamp(
+    0.875rem,
+    0.8309859154929577rem + 0.18779342723004694vw,
+    1rem
+  ) !important;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   /* max-width: 1200px; */
@@ -107,7 +138,6 @@ img {
 
 .section__title {
   text-align: center;
-  font-size: 2.5rem;
   font-weight: var(--font-demi-bold);
   padding-bottom: 1.875rem;
   letter-spacing: -0.4px;
@@ -115,7 +145,6 @@ img {
 
 .section__subtitle {
   text-align: center;
-  font-size: 1.25rem;
   font-weight: var(--font-demi-bold);
   letter-spacing: -0.32px;
   color: var(--secondary-color);
@@ -249,9 +278,7 @@ img {
 
 .hero__title {
   font-weight: var(--font-bold);
-  font-size: 3.125rem;
   color: var(--primary-color);
-  min-width: 300px;
 }
 
 /*=============== ABOUT ME ===============*/
@@ -340,11 +367,6 @@ img {
   justify-content: center;
 }
 
-.qualifications__title {
-  font-size: 2.5rem;
-  font-weight: var(--font-demi-bold);
-}
-
 .category__title-group {
   display: inline-flex;
   align-items: center;
@@ -354,7 +376,7 @@ img {
 }
 
 .category__title {
-  font-size: 1.125rem;
+  font-size: 1.125rem !important;
   font-weight: var(--font-medium);
 }
 
@@ -368,7 +390,6 @@ img {
 }
 
 .category__data h4 {
-  font-size: 1rem;
   letter-spacing: -0.16px;
   padding-bottom: 0.875rem;
 }
@@ -418,7 +439,7 @@ img {
 }
 
 .skill__title {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
   font-weight: var(--font-medium);
   color: var(--tertiary-color);
 }
@@ -526,7 +547,7 @@ img {
 
 .project-title {
   margin-top: 15px;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   font-weight: var(--font-medium);
   color: var(--secondary-color);
 }
@@ -595,7 +616,6 @@ img {
 }
 
 .contact__method-data {
-  font-size: 0.875rem;
   font-weight: var(--font-medium);
 }
 
@@ -613,17 +633,6 @@ img {
   font-weight: var(--font-demi-bold);
   color: var(--tertiary-color);
   font-size: 1rem;
-}
-
-.contact__title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.contact__subtitle {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
-  margin-bottom: 20px;
 }
 
 .contact__form {

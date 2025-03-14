@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Qualifications from "./components/Qualifications";
 import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <AboutMe />
         <Qualifications />
         <Skills />
+        <Portfolio />
       </main>
     </>
   );

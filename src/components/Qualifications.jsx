@@ -6,7 +6,7 @@ export default function Qualifications() {
           <h2 className="section__title">Qualifications</h2>
           <div className="education__container">
             <div className="category__title-group">
-              <i class="ri-pencil-ruler-2-line"></i>
+              <i className="ri-pencil-ruler-2-line"></i>
               <h3 className="category__title">Education</h3>
             </div>
             <div className="category__data">
@@ -22,7 +22,7 @@ export default function Qualifications() {
           </div>
           <div className="experience__container">
             <div className="category__title-group">
-              <i class="ri-building-line"></i>
+              <i className="ri-building-line"></i>
               <h3 className="category__title">Experience</h3>
             </div>
             <div className="category__data">

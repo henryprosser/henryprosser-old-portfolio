@@ -1,6 +1,12 @@
 /*=============== FONTS ===============*/
 @font-face {
   font-family: "Articulat CF";
+  src: url("./assets/fonts/ArticulatCF-Regular.otf") format("opentype");
+  font-weight: 400; /* Regular */
+}
+
+@font-face {
+  font-family: "Articulat CF";
   src: url("./assets/fonts/ArticulatCF-Medium.otf") format("opentype");
   font-weight: 500; /* Medium */
 }
@@ -36,6 +42,7 @@
   --body-font-size: 1.375rem;
 
   /*========== Font weight ==========*/
+  --font-regular: 400;
   --font-medium: 500;
   --font-demi-bold: 600;
   --font-bold: 700;
@@ -95,7 +102,7 @@ img {
 }
 
 .section {
-  padding-block: 2rem 1rem;
+  padding-block: 5rem 1rem;
 }
 
 .section__title {
@@ -641,6 +648,8 @@ img {
   background: var(--body-color);
   padding: 4px;
   color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 
 .input__group input,
@@ -657,6 +666,7 @@ img {
   font-size: 0.75rem;
   color: var(--tertiary-color);
   opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .input__group input:-webkit-autofill,
@@ -670,11 +680,23 @@ img {
   -webkit-text-fill-color: var(--tertiary-color) !important;
 }
 
+.input__group input:focus,
+.input__group textarea:focus {
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
 ::placeholder {
   font-family: var(--body-font);
   font-size: 0.75rem;
   color: var(--tertiary-color);
-  opacity: 0.5;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.input__group input:focus::placeholder,
+.input__group textarea:focus::placeholder {
+  opacity: 0.6;
 }
 
 .input__group textarea {
@@ -725,4 +747,41 @@ img {
 #submit__arrow {
   margin-bottom: 8px;
   margin-left: 4px;
+}
+
+/*=============== FOOTER ===============*/
+footer {
+  padding-top: 6rem;
+  padding-bottom: 1.6875rem;
+}
+
+.footer__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 2rem;
+  padding-top: 1.625rem;
+  padding-bottom: 1.375rem;
+}
+
+.footer__social-link {
+  color: var(--tertiary-color);
+  font-size: 1.3125rem;
+  transition: color 0.4s, transform 0.4s;
+}
+
+.footer__social-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-0.25rem);
+}
+
+.footer__copy {
+  font-size: 0.75rem;
+  font-weight: var(--font-regular);
+  color: var(--tertiary-color);
+  text-align: center;
 }

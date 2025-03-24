@@ -1,11 +1,11 @@
 export default function Skills() {
   return (
     <section className="skills section">
+      <h2 className="section__title">Skills</h2>
       <div className="skills__container container grid">
-        <h2 className="section__title">Skills</h2>
         <div className="skill__container">
           <h3 className="skill__title">Front-End</h3>
-          <div className="icon__container">
+          <div className="icon__container" id="front-end">
             <img
               src="src/assets/images/html.svg"
               alt="HTML5"

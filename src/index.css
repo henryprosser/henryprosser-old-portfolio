@@ -405,37 +405,16 @@ h4 {
   column-gap: 2.125rem;
 }
 
-.skills__container > *:first-child {
-  margin-bottom: -1.5rem; /* Cancels out the top gap */
-}
-
 .skill__container {
   text-align: center;
-  background-color: #222222;
-  padding: 1rem;
   width: 284px;
   justify-self: center;
-  border-radius: 32px;
   position: relative;
+  padding-bottom: 1.625rem;
 }
 
-.skill__container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  pointer-events: none;
-}
-
-/* Inner Shadow */
-.skill__container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 32px;
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
-  pointer-events: none;
+.skills__container > *:nth-child(3) {
+  padding-bottom: 0;
 }
 
 .skill__title {
@@ -448,8 +427,8 @@ h4 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto; /* Two rows */
-  gap: 20px;
-  padding: 25px 20px 15px;
+  column-gap: 18px;
+  padding-top: 0.875rem;
   width: fit-content;
   margin: 0 auto;
   position: relative;
@@ -479,30 +458,18 @@ h4 {
 } /* Second row, between second & third */
 
 .skill__icon {
-  width: 55px;
-  height: 55px;
   object-fit: contain;
+  background-color: var(--body-color);
+  border-radius: 16px;
 }
 
-.icon3 {
-  width: 52px;
-  height: 52px;
-  margin-left: 3px;
+#front-end {
+  row-gap: 18px;
 }
 
 #back-end,
 #tools {
   grid-template-columns: repeat(2, 1fr);
-}
-
-.icon6 {
-  height: 58px;
-  width: 58px;
-}
-
-.icon7 {
-  height: 59px;
-  width: 59px;
 }
 
 /*=============== PORTFOLIO ===============*/

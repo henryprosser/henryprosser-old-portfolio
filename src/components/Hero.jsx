@@ -7,7 +7,7 @@ export default function Hero() {
         alt="Mountain Background"
       />
       <div className="hero__shadow"></div>
-      <div className="hero__container container grid">
+      <div className="hero__container container">
         <div className="hero__data">
           <h1 className="hero__title">Welcome to My World.</h1>
         </div>

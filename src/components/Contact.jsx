@@ -32,12 +32,12 @@ export default function Contact() {
           </h4>
         </div>
         <p className="contact__or">OR</p>
-        <div className="contact__method-group">
+        <div className="contact__method-group" id="contact-message">
           <i className="ri-send-plane-line"></i>
           <h4 className="contact__method-data">Write me a message</h4>
         </div>
 
-        <form className="contact__form" onSubmit={handleSubmit}>
+        <form className="contact__form grid" onSubmit={handleSubmit}>
           <div className="input__group">
             <label htmlFor="name">Name</label>
             <input

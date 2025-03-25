@@ -1,15 +1,10 @@
 import React from "react";
-import assembly from "../assets/images/assembly.png";
-import chefClaude from "../assets/images/chef_claude.png";
-import memeGenerator from "../assets/images/meme_generator.png";
-import tenzies from "../assets/images/tenzies.png";
-import travelJournal from "../assets/images/travel_journal.png";
 
 export default function Projects() {
   return (
     <section className="projects section">
       <h2 className="section__title">Projects</h2>
-      <div className="projects__container container">
+      <div className="projects__container container grid">
         <div className="project__container">
           <img
             src="src/assets/images/chef_claude.png"

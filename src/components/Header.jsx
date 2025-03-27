@@ -39,14 +39,29 @@ export default function Header() {
       navToggle.style.display = "flex";
     };
 
+    // Reset on window resize
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        navMenu.classList.remove("show-menu");
+        navToggle.style.display = "none";
+        navClose.style.display = "none";
+      } else {
+        navToggle.style.display = "flex";
+      }
+    };
+
+    // Attach event listeners
     if (navToggle) navToggle.addEventListener("click", showMenu);
     if (navClose) navClose.addEventListener("click", hideMenu);
     navLinks.forEach((n) => n.addEventListener("click", linkAction));
+    window.addEventListener("resize", handleResize);
 
+    // Clean up
     return () => {
       if (navToggle) navToggle.removeEventListener("click", showMenu);
       if (navClose) navClose.removeEventListener("click", hideMenu);
       navLinks.forEach((n) => n.removeEventListener("click", linkAction));
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -86,8 +101,8 @@ export default function Header() {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#portfolio" className="nav__link">
-                Portfolio
+              <a href="#projects" className="nav__link">
+                Projects
               </a>
             </li>
             <li className="nav__item">

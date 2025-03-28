@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero section">
+    <section className="hero section" id="home">
       <img
         src="src/assets/images/mountain-bg.jpg"
         className="hero__bg"

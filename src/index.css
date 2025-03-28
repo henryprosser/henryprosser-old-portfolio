@@ -323,13 +323,14 @@ label,
 }
 
 /*=============== ABOUT ME ===============*/
+#about {
+  scroll-margin-top: 8.5rem;
+  padding-block: 0;
+}
+
 .about__container.grid {
   gap: 1.625rem;
   justify-content: center;
-}
-
-#about {
-  padding-block: 0;
 }
 
 .about {
@@ -414,6 +415,10 @@ label,
 }
 
 /*=============== QUALIFICATIONS ===============*/
+#qualifications {
+  scroll-margin-top: -2rem;
+}
+
 .qualifications {
   text-align: center;
 }
@@ -606,6 +611,10 @@ label,
 }
 
 /*=============== PROJECTS ===============*/
+#projects {
+  scroll-margin-top: -2rem;
+}
+
 .projects__container {
   display: grid;
   justify-items: center;
@@ -669,6 +678,10 @@ label,
 }
 
 /*=============== CONTACT ===============*/
+#contact {
+  scroll-margin-top: -2rem;
+}
+
 #contact__title {
   padding: 0;
 }

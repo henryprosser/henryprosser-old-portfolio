@@ -13,6 +13,39 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const handleScroll = () => {
+      let closestSection = null;
+      let closestOffset = Number.POSITIVE_INFINITY;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const offset = Math.abs(rect.top);
+
+        if (rect.top <= window.innerHeight && offset < closestOffset) {
+          closestSection = section;
+          closestOffset = offset;
+        }
+      });
+
+      document.querySelectorAll(".nav__link").forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      if (closestSection) {
+        const id = closestSection.getAttribute("id");
+        const activeLink = document.querySelector(`.nav__link[href="#${id}"]`);
+        activeLink?.classList.add("active");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     const navMenu = document.getElementById("nav-menu");
     const navToggle = document.getElementById("nav-toggle");
     const navClose = document.getElementById("nav-close");

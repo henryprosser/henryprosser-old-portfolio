@@ -1,6 +1,6 @@
 export default function Qualifications() {
   return (
-    <section className="qualifications section">
+    <section className="qualifications section" id="qualifications">
       <h2 className="section__title">Qualifications</h2>
       <div className="qualifications__container container grid">
         {/* Education Section */}

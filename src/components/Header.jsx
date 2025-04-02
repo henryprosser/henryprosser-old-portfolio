@@ -68,8 +68,10 @@ export default function Header() {
     /* Remove menu when clicking a nav link */
     const linkAction = () => {
       navMenu.classList.remove("show-menu");
-      navClose.style.display = "none";
-      navToggle.style.display = "flex";
+      if (window.innerWidth <= 768) {
+        navClose.style.display = "none";
+        navToggle.style.display = "flex";
+      }
     };
 
     // Reset on window resize

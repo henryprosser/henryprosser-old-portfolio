@@ -3,7 +3,15 @@ import React from "react";
 export default function Projects() {
   return (
     <section className="projects section" id="projects">
-      <h2 className="section__title">Projects</h2>
+      <div className="section__title-flexwrapper" id="projects-wrapper">
+        <h2 className="section__title">Projects</h2>
+        <img
+          src="src/assets/images/Circles.svg"
+          alt="Decorative circles"
+          className="projects__decoration"
+          id="circles__decoration"
+        />
+      </div>
       <div className="projects__container container grid">
         <div className="project__container">
           <img

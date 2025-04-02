@@ -1,7 +1,14 @@
 export default function Qualifications() {
   return (
     <section className="qualifications section" id="qualifications">
-      <h2 className="section__title">Qualifications</h2>
+      <div className="section__title-abswrapper">
+        <h2 className="section__title">Qualifications</h2>
+        <img
+          src="src/assets/images/Stripes.svg"
+          alt="Decorative stripes"
+          className="qualifications__decoration"
+        />
+      </div>
       <div className="qualifications__container container grid">
         {/* Education Section */}
         <div className="education__container">

@@ -18,9 +18,16 @@ export default function Contact() {
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section__title" id="contact__title">
-        Contact
-      </h2>
+      <div className="section__title-flexwrapper" id="contact-wrapper">
+        <h2 className="section__title" id="contact-title">
+          Contact
+        </h2>
+        <img
+          src="src/assets/images/Diamond.svg"
+          alt="Decorative diamond"
+          className="contact__decoration"
+        />
+      </div>
       <h3 className="section__subtitle">Get in touch</h3>
       <div className="contact__container container grid">
         <div className="contact__method-group">

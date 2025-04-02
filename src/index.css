@@ -146,7 +146,21 @@ label,
 }
 
 .section {
-  padding-block: 7.5rem 0;
+  padding-bottom: clamp(
+    7.5rem,
+    4.639084507042254rem + 12.206572769953052vw,
+    12.625rem
+  );
+}
+
+.section__title-abswrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.section__title-flexwrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .section__title {
@@ -325,7 +339,7 @@ label,
 /*=============== ABOUT ME ===============*/
 #about {
   scroll-margin-top: 8.5rem;
-  padding-block: 0;
+  padding-top: 1.5rem;
 }
 
 .about__container.grid {
@@ -335,6 +349,19 @@ label,
 
 .about {
   text-align: center;
+}
+
+.about__decoration {
+  position: absolute;
+  top: 0;
+  right: 90%;
+  transform: translate(0em, -0.5rem);
+  width: clamp(
+    3.28125rem,
+    2.874119718309859rem + 1.7370892018779343vw,
+    4.2375rem
+  );
+  height: auto;
 }
 
 .headshot__container {
@@ -416,11 +443,24 @@ label,
 
 /*=============== QUALIFICATIONS ===============*/
 #qualifications {
-  scroll-margin-top: -2rem;
+  scroll-margin-top: 6rem;
 }
 
 .qualifications {
   text-align: center;
+}
+
+.qualifications__decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(2.3em, -0.75em);
+  width: clamp(
+    3.28125rem,
+    2.874119718309859rem + 1.7370892018779343vw,
+    4.2375rem
+  );
+  height: auto;
 }
 
 .qualifications__container {
@@ -540,6 +580,24 @@ label,
 }
 
 /*=============== SKILLS ===============*/
+#skills {
+  scroll-margin-top: 7rem;
+}
+
+.skills {
+  text-align: center;
+}
+
+#skills-wrapper {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.skills__decoration {
+  width: clamp(2.5rem, 1.8617957746478875rem + 2.7230046948356805vw, 4rem);
+  height: auto;
+}
+
 .skills__container.grid {
   gap: 3.125rem;
 }
@@ -612,7 +670,25 @@ label,
 
 /*=============== PROJECTS ===============*/
 #projects {
-  scroll-margin-top: -2rem;
+  scroll-margin-top: 6rem;
+}
+
+.projects {
+  text-align: center;
+}
+
+#projects-wrapper {
+  gap: clamp(0.5625rem, 0.3644366197183099rem + 0.8450704225352111vw, 1rem);
+}
+
+#circles__decoration {
+  align-self: flex-start;
+}
+
+.projects__decoration {
+  width: clamp(2.5rem, 1.949823943661972rem + 2.3474178403755865vw, 4rem);
+  height: auto;
+  transform: translateY(25%);
 }
 
 .projects__container {
@@ -638,7 +714,7 @@ label,
 }
 
 .project__container:hover {
-  transform: translateY(-0.5px);
+  transform: translateY(-2px);
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.75);
 }
@@ -679,10 +755,25 @@ label,
 
 /*=============== CONTACT ===============*/
 #contact {
-  scroll-margin-top: -2rem;
+  padding-bottom: 0;
+  scroll-margin-top: 5rem;
 }
 
-#contact__title {
+.contact {
+  text-align: center;
+}
+
+.contact__decoration {
+  width: clamp(1.5625rem, 1.232394366197183rem + 1.4084507042253522vw, 2.7rem);
+  height: auto;
+}
+
+#contact-wrapper {
+  flex-direction: row-reverse;
+  gap: clamp(0.55rem, 0.46197183098591554rem + 0.3755868544600939vw, 0.8rem);
+}
+
+#contact-title {
   padding: 0;
 }
 
@@ -841,7 +932,7 @@ label,
 
 /*=============== FOOTER ===============*/
 footer {
-  padding-top: 6rem;
+  padding-top: 9rem;
   padding-bottom: 1.6875rem;
 }
 
@@ -1173,6 +1264,7 @@ footer {
   .contact__submit {
     grid-column: 1 / -1;
     justify-content: center;
+    padding: 20px;
   }
 
   .input__group label {
@@ -1217,11 +1309,6 @@ footer {
   .nav__social {
     column-gap: 1.25rem;
   }
-
-  /* .about__container {
-    grid-template-columns: 400px 525px;
-  }
-*/
 
   .skills__container {
     grid-template-columns: 1fr 1fr 1fr;

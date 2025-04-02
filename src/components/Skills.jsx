@@ -1,7 +1,14 @@
 export default function Skills() {
   return (
     <section className="skills section" id="skills">
-      <h2 className="section__title">Skills</h2>
+      <div className="section__title-flexwrapper" id="skills-wrapper">
+        <h2 className="section__title">Skills</h2>
+        <img
+          src="src/assets/images/Stack.svg"
+          alt="Decorative tech-stack"
+          className="skills__decoration"
+        />
+      </div>
       <div className="skills__container container grid">
         <div className="skill__container">
           <h3 className="skill__title">Front-End</h3>

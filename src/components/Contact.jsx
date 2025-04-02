@@ -17,10 +17,17 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact section">
-      <h2 className="section__title" id="contact__title">
-        Contact
-      </h2>
+    <section className="contact section" id="contact">
+      <div className="section__title-flexwrapper" id="contact-wrapper">
+        <h2 className="section__title" id="contact-title">
+          Contact
+        </h2>
+        <img
+          src="src/assets/images/Diamond.svg"
+          alt="Decorative diamond"
+          className="contact__decoration"
+        />
+      </div>
       <h3 className="section__subtitle">Get in touch</h3>
       <div className="contact__container container grid">
         <div className="contact__method-group">
@@ -32,12 +39,12 @@ export default function Contact() {
           </h4>
         </div>
         <p className="contact__or">OR</p>
-        <div className="contact__method-group">
+        <div className="contact__method-group" id="contact-message">
           <i className="ri-send-plane-line"></i>
           <h4 className="contact__method-data">Write me a message</h4>
         </div>
 
-        <form className="contact__form" onSubmit={handleSubmit}>
+        <form className="contact__form grid" onSubmit={handleSubmit}>
           <div className="input__group">
             <label htmlFor="name">Name</label>
             <input

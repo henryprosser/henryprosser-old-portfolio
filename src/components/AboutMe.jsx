@@ -1,7 +1,14 @@
 export default function AboutMe() {
   return (
     <section className="about section" id="about">
-      <h2 className="section__title">About Me</h2>
+      <div className="section__title-abswrapper">
+        <h2 className="section__title">About Me</h2>
+        <img
+          src="src/assets/images/Squares.svg"
+          alt="Decorative squares"
+          className="about__decoration"
+        />
+      </div>
       <div className="about__container container grid">
         <div className="headshot__container">
           <img

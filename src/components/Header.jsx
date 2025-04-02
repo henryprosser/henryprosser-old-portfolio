@@ -13,6 +13,39 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const handleScroll = () => {
+      let closestSection = null;
+      let closestOffset = Number.POSITIVE_INFINITY;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const offset = Math.abs(rect.top);
+
+        if (rect.top <= window.innerHeight && offset < closestOffset) {
+          closestSection = section;
+          closestOffset = offset;
+        }
+      });
+
+      document.querySelectorAll(".nav__link").forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      if (closestSection) {
+        const id = closestSection.getAttribute("id");
+        const activeLink = document.querySelector(`.nav__link[href="#${id}"]`);
+        activeLink?.classList.add("active");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     const navMenu = document.getElementById("nav-menu");
     const navToggle = document.getElementById("nav-toggle");
     const navClose = document.getElementById("nav-close");
@@ -35,18 +68,35 @@ export default function Header() {
     /* Remove menu when clicking a nav link */
     const linkAction = () => {
       navMenu.classList.remove("show-menu");
-      navClose.style.display = "none";
-      navToggle.style.display = "flex";
+      if (window.innerWidth <= 768) {
+        navClose.style.display = "none";
+        navToggle.style.display = "flex";
+      }
     };
 
+    // Reset on window resize
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        navMenu.classList.remove("show-menu");
+        navToggle.style.display = "none";
+        navClose.style.display = "none";
+      } else {
+        navToggle.style.display = "flex";
+      }
+    };
+
+    // Attach event listeners
     if (navToggle) navToggle.addEventListener("click", showMenu);
     if (navClose) navClose.addEventListener("click", hideMenu);
     navLinks.forEach((n) => n.addEventListener("click", linkAction));
+    window.addEventListener("resize", handleResize);
 
+    // Clean up
     return () => {
       if (navToggle) navToggle.removeEventListener("click", showMenu);
       if (navClose) navClose.removeEventListener("click", hideMenu);
       navLinks.forEach((n) => n.removeEventListener("click", linkAction));
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -86,8 +136,8 @@ export default function Header() {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#portfolio" className="nav__link">
-                Portfolio
+              <a href="#projects" className="nav__link">
+                Projects
               </a>
             </li>
             <li className="nav__item">

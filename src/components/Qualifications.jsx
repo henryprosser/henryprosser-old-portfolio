@@ -1,4 +1,21 @@
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+
 export default function Qualifications() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "40px",
+      duration: 900,
+      delay: 200,
+      easing: "ease-out",
+      reset: false,
+    });
+    sr.reveal(`.qualifications__timeline`);
+    sr.reveal(`.education__container`, { origin: "left" });
+    sr.reveal(`.experience__container`, { origin: "right" });
+  });
+
   return (
     <section className="qualifications section" id="qualifications">
       <div className="section__title-abswrapper">

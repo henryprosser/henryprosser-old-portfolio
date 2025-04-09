@@ -1,4 +1,19 @@
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+
 export default function AboutMe() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: "20px",
+      duration: 650,
+      delay: 150,
+      easing: "ease-out",
+      reset: false,
+    });
+    sr.reveal(`.headshot__container`, { origin: "right" });
+    sr.reveal(`.about__data`, { origin: "left" });
+  });
+
   return (
     <section className="about section" id="about">
       <div className="section__title-abswrapper">

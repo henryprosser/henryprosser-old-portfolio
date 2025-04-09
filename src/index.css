@@ -323,12 +323,16 @@ label,
 }
 
 .hero__data {
-  position: absolute;
-  top: 32%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  width: 75%;
+  transform: translateY(-30px);
+}
+
+.hero__word {
+  display: inline-block;
 }
 
 .hero__title {
@@ -709,12 +713,12 @@ label,
   height: 277.7px;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.14);
   border-radius: 30px;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   cursor: pointer;
 }
 
 .project__container:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) !important;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.75);
 }

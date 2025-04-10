@@ -9,9 +9,18 @@ export default function Hero() {
       opacity: 0,
       duration: 600,
       interval: 130,
-      delay: 400,
+      delay: 300,
       easing: "ease-out",
       cleanup: true,
+    });
+
+    ScrollReveal().reveal(".arrow__wrapper", {
+      origin: "bottom",
+      distance: "50px",
+      opacity: 0,
+      duration: 800,
+      delay: 900,
+      easing: "ease-out",
     });
   });
 
@@ -31,6 +40,11 @@ export default function Hero() {
             <span className="hero__word">My</span>{" "}
             <span className="hero__word">World.</span>
           </h1>
+          <div className="arrow__wrapper">
+            <a href="#about" className="arrow__link">
+              <div className="hero__arrow"></div>
+            </a>
+          </div>
         </div>
       </div>
     </section>

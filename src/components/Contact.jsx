@@ -57,7 +57,11 @@ export default function Contact() {
           <h4 className="contact__method-data">Write me a message</h4>
         </div>
 
-        <form className="contact__form grid" onSubmit={handleSubmit}>
+        <form
+          action="https://getform.io/f/bwnqokea"
+          method="POST"
+          className="contact__form grid"
+        >
           <div className="input__group">
             <label htmlFor="name">Name</label>
             <input
@@ -95,6 +99,14 @@ export default function Contact() {
               required
             ></textarea>
           </div>
+
+          <input
+            type="text"
+            name="_gotcha"
+            style={{ display: "none" }}
+            tabIndex="-1"
+            autoComplete="off"
+          />
 
           <button type="submit" className="contact__submit">
             Submit

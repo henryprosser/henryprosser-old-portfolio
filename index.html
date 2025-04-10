@@ -9,26 +9,8 @@
       id="favicon"
       rel="icon"
       type="image/x-icon"
-      href="./public/favicon-light.ico"
+      href="./public/favicon.svg"
     />
-    <script>
-      function updateFavicon() {
-        const favicon = document.getElementById("favicon");
-        const prefersDarkMode = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        favicon.href = prefersDarkMode
-          ? "./public/favicon-dark.ico"
-          : "./public/favicon-light.ico";
-      }
-
-      updateFavicon();
-
-      // Listen for changes in theme
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", updateFavicon);
-    </script>
     <!-- REMIX ICONS -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"

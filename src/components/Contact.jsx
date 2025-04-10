@@ -1,4 +1,6 @@
-import { useState } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,6 +17,17 @@ export default function Contact() {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
+
+  useEffect(() => {
+    ScrollReveal().reveal(".contact__container", {
+      origin: "bottom",
+      distance: "50px",
+      duration: 800,
+      delay: 200,
+      easing: "ease-out",
+      reset: false,
+    });
+  });
 
   return (
     <section className="contact section" id="contact">

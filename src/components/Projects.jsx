@@ -1,6 +1,22 @@
 import React from "react";
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 export default function Projects() {
+  useEffect(() => {
+    ScrollReveal().reveal(".project__container", {
+      origin: "bottom",
+      distance: "50px",
+      duration: 800,
+      delay: 300,
+      easing: "ease-out",
+      reset: false,
+      afterReveal: (el) => {
+        el.style.transition = ""; // Removes ScrollReveal’s inline transition
+      },
+    });
+  });
+
   return (
     <section className="projects section" id="projects">
       <div className="section__title-flexwrapper" id="projects-wrapper">

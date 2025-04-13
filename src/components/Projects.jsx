@@ -19,8 +19,10 @@ export default function Projects() {
 
   return (
     <section className="projects section" id="projects">
-      <div className="section__title-flexwrapper" id="projects-wrapper">
-        <h2 className="section__title">Projects</h2>
+      <div className="section__title-abswrapper" id="projects-wrapper">
+        <h2 className="section__title" id="project-title">
+          Projects
+        </h2>
         <img
           src="src/assets/images/Circles.svg"
           alt="Decorative circles"

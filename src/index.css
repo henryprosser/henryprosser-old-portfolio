@@ -799,19 +799,23 @@ label,
   gap: clamp(0.5625rem, 0.3644366197183099rem + 0.8450704225352111vw, 1rem);
 }
 
-#circles__decoration {
-  align-self: flex-start;
+#project-title {
+  padding: 0;
 }
 
 .projects__decoration {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(125%, -62%);
   width: clamp(2.5rem, 1.949823943661972rem + 2.3474178403755865vw, 4rem);
   height: auto;
-  transform: translateY(25%);
 }
 
 .projects__container {
   display: grid;
   justify-items: center;
+  padding-top: 1.875rem;
 }
 
 .projects__container.grid {
@@ -884,11 +888,11 @@ label,
 .contact__decoration {
   width: clamp(1.5625rem, 1.232394366197183rem + 1.4084507042253522vw, 2.7rem);
   height: auto;
-}
-
-#contact-wrapper {
-  flex-direction: row-reverse;
-  gap: clamp(0.55rem, 0.46197183098591554rem + 0.3755868544600939vw, 0.8rem);
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-130%, -50%);
 }
 
 #contact-title {

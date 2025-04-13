@@ -32,7 +32,7 @@
   --hero-color: #aeb7c1;
   --title-color: #e4e4e4;
   --subtitle-color: #838383;
-  --body-color: #1e1e1e;
+  --body-color: #212226;
   --button-color: #222222;
 
   /*========== Font and typography ==========*/
@@ -66,7 +66,7 @@ input {
 }
 
 body {
-  background: linear-gradient(to bottom, #1e1e1e 16%, #000000 100%);
+  background-color: var(--body-color);
 }
 
 button,
@@ -335,7 +335,7 @@ label,
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(30, 30, 30, 0) 66%, #1e1e1e 100%);
+  background: linear-gradient(to bottom, rgba(33, 34, 38, 0) 66%, #212226 100%);
 }
 
 .hero__data {
@@ -492,7 +492,7 @@ label,
   justify-content: center;
   width: 155px;
   height: 49px;
-  background-color: #222222;
+  background-color: #292b30;
   color: white;
   font-size: 1.125rem;
   font-weight: var(--font-medium);
@@ -523,7 +523,7 @@ label,
 
 /* Hover Effect */
 .download__button:hover {
-  background-color: #333333;
+  background-color: #313339;
   transform: translateY(-1px); /* Slight lift effect */
 }
 
@@ -743,24 +743,37 @@ label,
   justify-self: center;
 } /* Second row, between second & third */
 
-.skill__icon {
-  object-fit: contain;
-  background-color: var(--body-color);
+.skill__icon-wrapper {
+  background-color: #25262a;
   border-radius: 16px;
-  filter: grayscale(100%) brightness(0.85);
-  transition: filter 0.6s ease, transform 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
 }
 
-.skill__icon:hover {
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  filter: none;
+.skill__icon {
+  object-fit: contain;
+  mix-blend-mode: luminosity;
+  opacity: 0.85;
+  transition: mix-blend-mode 0.6s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+.skill__icon-wrapper:hover .skill__icon {
+  mix-blend-mode: normal;
+  opacity: 1;
   transform: scale(1.025);
 }
 
-/* Remove grayscale icons for Touch devices */
+.skill__icon-wrapper:hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Remove luminosity effect for Touch devices */
 @media (hover: none) and (pointer: coarse) {
   .skill__icon {
-    filter: none;
+    mix-blend-mode: normal;
+    opacity: 1;
   }
 }
 
@@ -932,7 +945,7 @@ label,
   top: -14.5px;
   left: 15px;
   font-weight: var(--font-medium);
-  background: #000000;
+  background: var(--body-color);
   padding: 4px;
   color: var(--primary-color);
   transition: all 0.3s ease-in-out;
@@ -961,7 +974,6 @@ label,
   background-color: var(--body-color) !important;
   color: var(--tertiary-color) !important;
   font-family: var(--body-font);
-  font-size: 0.75rem;
   border: 1.5px solid var(--tertiary-color);
   box-shadow: 0 0 0px 1000px var(--body-color) inset !important;
   -webkit-text-fill-color: var(--tertiary-color) !important;
@@ -1088,6 +1100,22 @@ footer {
   text-align: center;
 }
 
+/*=============== EXTRA ===============*/
+.about__decoration,
+.qualifications__decoration,
+.projects__decoration,
+.skills__decoration,
+.contact__decoration {
+  z-index: 0;
+}
+
+.section__title,
+.category__title,
+.section__subtitle {
+  position: relative;
+  z-index: 1;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 700px) {
@@ -1126,13 +1154,14 @@ footer {
     scale: 1.05;
   }
 
-  .nav__menu.scrolled {
-    background: rgba(30, 30, 30, 0.8);
+  .nav__menu.scrolled,
+  .nav__social-link.scrolled {
+    background: rgba(32, 33, 36, 0.8);
   }
 
   .nav__menu {
     background: rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 12px rgba(5, 5, 5, 0.15);
     backdrop-filter: blur(8px);
     border-radius: 100px;
     padding: 0.4rem 0.75rem;

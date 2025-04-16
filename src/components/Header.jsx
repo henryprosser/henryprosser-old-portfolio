@@ -5,7 +5,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 1000);
+      setIsScrolled(window.scrollY > 650);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -154,7 +154,7 @@ export default function Header() {
               <a
                 href="https://www.linkedin.com/in/henry-prosser-2b9aa512a/"
                 target="_blank"
-                className="nav__social-link"
+                className={`nav__social-link ${isScrolled ? "scrolled" : ""}`}
               >
                 <i className="ri-linkedin-box-fill"></i>
               </a>
@@ -162,7 +162,7 @@ export default function Header() {
               <a
                 href="https://github.com/henryprosser"
                 target="_blank"
-                className="nav__social-link"
+                className={`nav__social-link ${isScrolled ? "scrolled" : ""}`}
               >
                 <i className="ri-github-fill"></i>
               </a>

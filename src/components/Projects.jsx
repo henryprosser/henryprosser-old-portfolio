@@ -19,8 +19,10 @@ export default function Projects() {
 
   return (
     <section className="projects section" id="projects">
-      <div className="section__title-flexwrapper" id="projects-wrapper">
-        <h2 className="section__title">Projects</h2>
+      <div className="section__title-abswrapper" id="projects-wrapper">
+        <h2 className="section__title" id="project-title">
+          Projects
+        </h2>
         <img
           src="src/assets/images/Circles.svg"
           alt="Decorative circles"
@@ -29,7 +31,12 @@ export default function Projects() {
         />
       </div>
       <div className="projects__container container grid">
-        <div className="project__container">
+        <a
+          href="https://chef-claude-eight.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project__container"
+        >
           <img
             src="src/assets/images/chef_claude.png"
             alt="Chef Claude"
@@ -39,8 +46,13 @@ export default function Projects() {
             <p className="project-card__title">AI Recipe Generator</p>
             <i class="ri-arrow-right-up-line project-card__icon"></i>
           </div>
-        </div>
-        <div className="project__container">
+        </a>
+        <a
+          href="https://tenzies-game-nine-mu.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project__container"
+        >
           <img
             src="src/assets/images/tenzies.png"
             alt="Tenzies"
@@ -50,8 +62,13 @@ export default function Projects() {
             <p className="project-card__title">Tenzies</p>
             <i class="ri-arrow-right-up-line project-card__icon"></i>
           </div>
-        </div>
-        <div className="project__container">
+        </a>
+        <a
+          href="https://assembly-endgame-hangman-nine.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project__container"
+        >
           <img
             src="src/assets/images/assembly.png"
             alt="Assembly: Endgame"
@@ -61,8 +78,13 @@ export default function Projects() {
             <p className="project-card__title">Assembly: Endgame</p>
             <i class="ri-arrow-right-up-line project-card__icon"></i>
           </div>
-        </div>
-        <div className="project__container">
+        </a>
+        <a
+          href="https://travel-journal-nine-xi.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project__container"
+        >
           <img
             src="src/assets/images/travel_journal.png"
             alt="Travel Journal"
@@ -72,8 +94,13 @@ export default function Projects() {
             <p className="project-card__title">Travel Journal</p>
             <i class="ri-arrow-right-up-line project-card__icon"></i>
           </div>
-        </div>
-        <div className="project__container">
+        </a>
+        <a
+          href="https://meme-generator-puce-mu.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project__container"
+        >
           <img
             src="src/assets/images/meme_generator.png"
             alt="Meme Generator"
@@ -83,7 +110,7 @@ export default function Projects() {
             <p className="project-card__title">Meme Generator</p>
             <i class="ri-arrow-right-up-line project-card__icon"></i>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <section className="contact section" id="contact">
-      <div className="section__title-flexwrapper" id="contact-wrapper">
+      <div className="section__title-abswrapper" id="contact-wrapper">
         <h2 className="section__title" id="contact-title">
           Contact
         </h2>

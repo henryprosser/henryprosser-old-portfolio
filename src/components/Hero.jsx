@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import heroBackground from "../assets/images/mountain-bg.jpg";
 
 export default function Hero() {
   useEffect(() => {
@@ -22,12 +23,12 @@ export default function Hero() {
       delay: 900,
       easing: "ease-out",
     });
-  });
+  }, []);
 
   return (
     <section className="hero section" id="home">
       <img
-        src="src/assets/images/mountain-bg.jpg"
+        src={heroBackground}
         className="hero__bg"
         alt="Mountain Background"
       />

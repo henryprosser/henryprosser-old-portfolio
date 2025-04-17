@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import decorativeDiamond from "../assets/images/Diamond.svg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,11 +14,6 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   useEffect(() => {
     ScrollReveal().reveal(".contact__container", {
       origin: "bottom",
@@ -27,7 +23,7 @@ export default function Contact() {
       easing: "ease-out",
       reset: false,
     });
-  });
+  }, []);
 
   return (
     <section className="contact section" id="contact">
@@ -36,7 +32,7 @@ export default function Contact() {
           Contact
         </h2>
         <img
-          src="src/assets/images/Diamond.svg"
+          src={decorativeDiamond}
           alt="Decorative diamond"
           className="contact__decoration"
         />

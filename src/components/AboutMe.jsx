@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import decorativeSquares from "../assets/images/Squares.svg";
+import profilePic from "../assets/images/profile-pic.png";
 
 export default function AboutMe() {
   useEffect(() => {
@@ -12,25 +14,21 @@ export default function AboutMe() {
     });
     sr.reveal(`.headshot__container`, { origin: "right" });
     sr.reveal(`.about__data`, { origin: "left" });
-  });
+  }, []);
 
   return (
     <section className="about section" id="about">
       <div className="section__title-abswrapper">
         <h2 className="section__title">About Me</h2>
         <img
-          src="src/assets/images/Squares.svg"
+          src={decorativeSquares}
           alt="Decorative squares"
           className="about__decoration"
         />
       </div>
       <div className="about__container container grid">
         <div className="headshot__container">
-          <img
-            src="src/assets/images/profile-pic copy.png"
-            alt="Henry Prosser"
-            className="headshot__img"
-          />
+          <img src={profilePic} alt="Henry Prosser" className="headshot__img" />
         </div>
         <div className="about__data">
           <p className="about__description">

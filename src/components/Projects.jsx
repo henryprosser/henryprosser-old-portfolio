@@ -1,6 +1,11 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import decorativeCircles from "../assets/images/Circles.svg";
+import chefClaude from "../assets/images/chef_claude.png";
+import tenzies from "../assets/images/tenzies.png";
+import assembly from "../assets/images/assembly.png";
+import travelJournal from "../assets/images/travel_journal.png";
+import memeGenerator from "../assets/images/meme_generator.png";
 
 export default function Projects() {
   useEffect(() => {
@@ -15,7 +20,7 @@ export default function Projects() {
         el.style.transition = ""; // Removes ScrollReveal’s inline transition
       },
     });
-  });
+  }, []);
 
   return (
     <section className="projects section" id="projects">
@@ -24,7 +29,7 @@ export default function Projects() {
           Projects
         </h2>
         <img
-          src="src/assets/images/Circles.svg"
+          src={decorativeCircles}
           alt="Decorative circles"
           className="projects__decoration"
           id="circles__decoration"
@@ -37,14 +42,10 @@ export default function Projects() {
           rel="noopener noreferrer"
           className="project__container"
         >
-          <img
-            src="src/assets/images/chef_claude.png"
-            alt="Chef Claude"
-            className="project__image"
-          />
+          <img src={chefClaude} alt="Chef Claude" className="project__image" />
           <div className="project-card__footer">
             <p className="project-card__title">AI Recipe Generator</p>
-            <i class="ri-arrow-right-up-line project-card__icon"></i>
+            <i className="ri-arrow-right-up-line project-card__icon"></i>
           </div>
         </a>
         <a
@@ -53,14 +54,10 @@ export default function Projects() {
           rel="noopener noreferrer"
           className="project__container"
         >
-          <img
-            src="src/assets/images/tenzies.png"
-            alt="Tenzies"
-            className="project__image"
-          />
+          <img src={tenzies} alt="Tenzies" className="project__image" />
           <div className="project-card__footer">
             <p className="project-card__title">Tenzies</p>
-            <i class="ri-arrow-right-up-line project-card__icon"></i>
+            <i className="ri-arrow-right-up-line project-card__icon"></i>
           </div>
         </a>
         <a
@@ -70,13 +67,13 @@ export default function Projects() {
           className="project__container"
         >
           <img
-            src="src/assets/images/assembly.png"
+            src={assembly}
             alt="Assembly: Endgame"
             className="project__image"
           />
           <div className="project-card__footer">
             <p className="project-card__title">Assembly: Endgame</p>
-            <i class="ri-arrow-right-up-line project-card__icon"></i>
+            <i className="ri-arrow-right-up-line project-card__icon"></i>
           </div>
         </a>
         <a
@@ -86,13 +83,13 @@ export default function Projects() {
           className="project__container"
         >
           <img
-            src="src/assets/images/travel_journal.png"
+            src={travelJournal}
             alt="Travel Journal"
             className="project__image"
           />
           <div className="project-card__footer">
             <p className="project-card__title">Travel Journal</p>
-            <i class="ri-arrow-right-up-line project-card__icon"></i>
+            <i className="ri-arrow-right-up-line project-card__icon"></i>
           </div>
         </a>
         <a
@@ -102,13 +99,13 @@ export default function Projects() {
           className="project__container"
         >
           <img
-            src="src/assets/images/meme_generator.png"
+            src={memeGenerator}
             alt="Meme Generator"
             className="project__image"
           />
           <div className="project-card__footer">
             <p className="project-card__title">Meme Generator</p>
-            <i class="ri-arrow-right-up-line project-card__icon"></i>
+            <i className="ri-arrow-right-up-line project-card__icon"></i>
           </div>
         </a>
       </div>

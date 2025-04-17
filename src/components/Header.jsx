@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import henryLogo from "../assets/images/nav-logo.svg";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -106,11 +107,7 @@ export default function Header() {
       <header className="header">
         <nav className="nav container">
           <div className="nav__logo">
-            <img
-              src="src/assets/images/nav-logo.svg"
-              className="nav__logo"
-              alt="Henry logo"
-            />
+            <img src={henryLogo} className="nav__logo" alt="Henry logo" />
           </div>
           <div
             className={`nav__menu ${isScrolled ? "scrolled" : ""}`}

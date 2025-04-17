@@ -1,5 +1,15 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import decorativeTechStack from "../assets/images/Stack.svg";
+import htmlIcon from "../assets/images/html.svg";
+import cssIcon from "../assets/images/css.svg";
+import jsIcon from "../assets/images/js.svg";
+import reactIcon from "../assets/images/react.svg";
+import vueIcon from "../assets/images/vue.svg";
+import pythonIcon from "../assets/images/python.svg";
+import javaIcon from "../assets/images/java.svg";
+import figmaIcon from "../assets/images/figma.svg";
+import gitIcon from "../assets/images/git.svg";
 
 export default function Skills() {
   useEffect(() => {
@@ -11,14 +21,14 @@ export default function Skills() {
       easing: "ease-out",
       reset: false,
     });
-  });
+  }, []);
 
   return (
     <section className="skills section" id="skills">
       <div className="section__title-flexwrapper" id="skills-wrapper">
         <h2 className="section__title">Skills</h2>
         <img
-          src="src/assets/images/Stack.svg"
+          src={decorativeTechStack}
           alt="Decorative tech-stack"
           className="skills__decoration"
         />
@@ -27,40 +37,20 @@ export default function Skills() {
         <div className="skill__container">
           <h3 className="skill__title">Front-End</h3>
           <div className="icon__container" id="front-end">
-            <div class="skill__icon-wrapper icon1">
-              <img
-                src="src/assets/images/html.svg"
-                alt="HTML5"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon1">
+              <img src={htmlIcon} alt="HTML5" className="skill__icon" />
             </div>
-            <div class="skill__icon-wrapper icon2">
-              <img
-                src="src/assets/images/css.svg"
-                alt="CSS3"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon2">
+              <img src={cssIcon} alt="CSS3" className="skill__icon" />
             </div>
-            <div class="skill__icon-wrapper icon3">
-              <img
-                src="src/assets/images/js.svg"
-                alt="JavaScript"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon3">
+              <img src={jsIcon} alt="JavaScript" className="skill__icon" />
             </div>
-            <div class="skill__icon-wrapper icon4">
-              <img
-                src="src/assets/images/react.svg"
-                alt="React"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon4">
+              <img src={reactIcon} alt="React" className="skill__icon" />
             </div>
-            <div class="skill__icon-wrapper icon5">
-              <img
-                src="src/assets/images/vue.svg"
-                alt="Vue"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon5">
+              <img src={vueIcon} alt="Vue" className="skill__icon" />
             </div>
           </div>
         </div>
@@ -68,19 +58,11 @@ export default function Skills() {
         <div className="skill__container">
           <h3 className="skill__title">Back-End</h3>
           <div className="icon__container" id="back-end">
-            <div class="skill__icon-wrapper icon6">
-              <img
-                src="src/assets/images/python.svg"
-                alt="Python"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon6">
+              <img src={pythonIcon} alt="Python" className="skill__icon" />
             </div>
-            <div class="skill__icon-wrapper icon7">
-              <img
-                src="src/assets/images/java.svg"
-                alt="Java"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon7">
+              <img src={javaIcon} alt="Java" className="skill__icon" />
             </div>
           </div>
         </div>
@@ -88,19 +70,11 @@ export default function Skills() {
         <div className="skill__container">
           <h3 className="skill__title">Tools</h3>
           <div className="icon__container" id="tools">
-            <div class="skill__icon-wrapper icon8">
-              <img
-                src="src/assets/images/figma.svg"
-                alt="Python"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon8">
+              <img src={figmaIcon} alt="Figma" className="skill__icon" />
             </div>
-            <div class="skill__icon-wrapper icon9">
-              <img
-                src="src/assets/images/git.svg"
-                alt="Java"
-                className="skill__icon"
-              />
+            <div className="skill__icon-wrapper icon9">
+              <img src={gitIcon} alt="Git" className="skill__icon" />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import decorativeStripes from "../assets/images/Stripes.svg";
 
 export default function Qualifications() {
   useEffect(() => {
@@ -14,14 +15,14 @@ export default function Qualifications() {
     sr.reveal(`.qualifications__timeline`);
     sr.reveal(`.education__container`, { origin: "left" });
     sr.reveal(`.experience__container`, { origin: "right" });
-  });
+  }, []);
 
   return (
     <section className="qualifications section" id="qualifications">
       <div className="section__title-abswrapper">
         <h2 className="section__title">Qualifications</h2>
         <img
-          src="src/assets/images/Stripes.svg"
+          src={decorativeStripes}
           alt="Decorative stripes"
           className="qualifications__decoration"
         />

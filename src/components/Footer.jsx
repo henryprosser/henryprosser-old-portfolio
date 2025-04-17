@@ -8,6 +8,8 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/henry-prosser-2b9aa512a/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               className="footer__social-link"
             >
               <i className="ri-linkedin-box-fill"></i>
@@ -16,6 +18,8 @@ export default function Footer() {
             <a
               href="https://github.com/henryprosser"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub page"
               className="footer__social-link"
             >
               <i className="ri-github-fill"></i>

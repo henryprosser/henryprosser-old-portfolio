@@ -40,9 +40,6 @@ export default function AboutMe() {
             When I'm not coding, you'll find me skiing, playing guitar, or
             working on side projects.
           </p>
-          <a href="#" download className="download__button">
-            Download CV
-          </a>
         </div>
       </div>
     </section>

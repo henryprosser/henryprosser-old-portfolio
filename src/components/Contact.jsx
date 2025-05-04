@@ -42,9 +42,7 @@ export default function Contact() {
         <div className="contact__method-group">
           <i className="ri-mail-line"></i>
           <h4 className="contact__method-data">
-            <a href="mailto:henryprosser@yahoo.co.uk">
-              henryprosser@yahoo.co.uk
-            </a>
+            <a href="mailto:henryprosser@icloud.com">henryprosser@icloud.com</a>
           </h4>
         </div>
         <p className="contact__or">OR</p>
